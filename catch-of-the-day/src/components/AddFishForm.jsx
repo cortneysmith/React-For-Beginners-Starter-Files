@@ -8,7 +8,7 @@ class AddFishForm extends React.Component {
   imageRef = React.createRef();
 
   createFish = event => {
-    // 1. stop form from submitting
+    // 1. Stop form from submitting
     event.preventDefault();
     const fish = {
       name: this.nameRef.current.value,
@@ -30,12 +30,7 @@ class AddFishForm extends React.Component {
           type="text"
           placeholder="Price"
         />
-        <select
-          name="status"
-          ref={this.statusRef}
-          type="text"
-          placeholder="Status"
-        >
+        <select name="status" ref={this.statusRef}>
           <option value="available">Fresh!</option>
           <option value="unavailable">Sold Out!</option>
         </select>
@@ -46,7 +41,7 @@ class AddFishForm extends React.Component {
           type="text"
           placeholder="Image"
         />
-        <button className="submit">+ Add Fish</button>
+        <button type="submit">+ Add Fish</button>
       </form>
     );
   }
